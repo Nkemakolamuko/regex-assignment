@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+
+    <style>
+
+        .navigate {
+            display: flex;
+            background-color : rgb(0, 255, 98);
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            height: 5vh;
+        }
+
+        .navigate input {
+            font-size: 18px;
+            height: 2.8rem;
+            cursor: pointer;
+            border: none;
+            background-color: rgb(28, 88, 88);
+            color: white;
+            border-radius: 3px;
+        }
+
+        .navigate a {
+            font-size: 18px;
+        }
+    </style>
+
+<body>
+
+    <div class="navigate">
+         <a href="../index.html"><input type="button" value="Previous Task"></a>
+         <input type="button" value="Click to check Two" onclick="alert('Assigment Solution in Dev Tool console')">
+         <a href="Third-one.html"><input type="button" value="Next Task"></a>
+    </div>
+    
+
+
+        <script>
+        const pattern = /(\w+)\s+(['’])|(['’])(\w+)/g;
+        const text = "I said, 'Don't touch that!'";
+        const replacement = '$1"$2$3$4';
+
+        const newText = text.replace(pattern, replacement);
+
+        console.log(newText);
+
+    </script>
+</body>
+</html>
+
+

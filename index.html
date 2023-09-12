@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+
+    <style>
+        
+
+        .navigate {
+            display: flex;
+            background-color : red;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 10%;
+            height: 5vh;
+        }
+
+        .navigate input {
+            font-size: 18px;
+            height: 2.8rem;
+            cursor: pointer;
+            border: none;
+            background-color: rgb(0, 104, 104);
+            color: white;
+            border-radius: 3px;
+        }
+
+        .navigate a {
+            font-size: 18px;
+        }
+    </style>
+
+<body>
+
+    <div class="navigate">
+         <input type="button" value="Click to check One" onclick="alert('Assigment Solution in Dev Tool console')">
+         <a href="Files/Second-One.html"><input type="button" value="Next Task"></a>
+    </div>
+    
+
+
+
+
+
+    <script>
+        // For Number one
+        const str1 = "car and cat.";
+        console.log(/(car|cat)/.test(str1)); 
+
+        // For Number two
+        const str2 = "pop and prop.";
+        console.log(/(pop|prop)/.test(str2)); 
+
+
+        //For Number Three
+        const str3 = "ferret, ferry, and ferrari.";
+        console.log(/(ferret|ferry|ferrari)/.test(str3));  
+
+        //For Number Four
+        const str4 = "delicious and curious and obvious and anxious.";
+
+        console.log(/\b\w+ious\b/.test(str4)); // true
+
+        // For Number Five
+        const str5 = " .,;:"
+        console.log(/\s[.,;:]/.test(str5))
+
+        // For Number Six
+        const str6 = "The quick brown fox jumps over the lazy dog. Sherifat wrote a beautiful article."
+        console.log(/\b\w{7,}\b/.test(str6));
+
+        // For Number Seven 
+        const str7 = "This sentence without no 'e' or 'E'."
+        console.log(/\b[^\WeE]+\b/.test(str7)); 
+
+
+    </script>
+</body>
+</html>
